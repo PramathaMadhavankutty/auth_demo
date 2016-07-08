@@ -1,5 +1,5 @@
 curl -H "Content-Type :application/json" -X POST -d
-'{
+{
 
 
     "object":
@@ -80,4 +80,4 @@ curl -H "Content-Type :application/json" -X POST -d
     }
 
 
-}'http://localhost:8000/subscriptions_webhook/
+}
