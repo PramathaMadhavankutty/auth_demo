@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'hello',
     'accounts',
+    'paypal_store',
 ]
 
 MIDDLEWARE_CLASSES = [
