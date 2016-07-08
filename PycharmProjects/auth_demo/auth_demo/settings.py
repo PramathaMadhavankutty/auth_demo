@@ -130,7 +130,7 @@ AUTHENTICATION_BACKENDS = [
     'accounts.backends.EmailAuth',
 
 ]
-
+# stripe settings
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_mttFwgc78Jk5ShtvskP2RHpG' )
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_k7CEJxI3Net5oB6i8zyT70Ya')
 
@@ -139,3 +139,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
+#paypal settings
+SITE_URL = 'http://127.0.0.1:8000/'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'pramatha.madhavankutty@yahoo.com'
