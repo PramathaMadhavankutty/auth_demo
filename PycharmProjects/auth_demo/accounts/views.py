@@ -49,15 +49,15 @@ def register(request):
         today = datetime.date.today()
         form = UserRegistrationForm()
 
-        args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE}
-        args.update(csrf(request))
+    args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE}
+    args.update(csrf(request))
 
-        return render(request, 'register.html', args)
+    return render(request, 'register.html', args)
 
 
 @login_required(login_url='/login')
 def profile(request):
-    return render(request, "profile.html")
+    return render(request, 'profile.html')
 
 def login(request):
     if request.method == "POST":
@@ -79,14 +79,14 @@ def login(request):
 
     args = {'form':form}
     args.update(csrf(request))
-    return render(request,"login.html",args)
+    return render(request,'login.html',args)
 
 def logout(request):
     auth.logout(request)
     messages.success(request,"You have successfully logged out")
     return redirect(reverse('index'))
 
-@login_required(login_url='/login/')
+@login_required(login_url='/accounts/login/')
 def cancel_subscription(request):
     try:
         customer = stripe.Customer.retrieve(request.user.stripe_id)
