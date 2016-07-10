@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from accounts.models import User
 from django.core.exceptions import ValidationError
 
+
 class UserRegistrationForm(UserCreationForm):
 
     MONTH_CHOICES = [(i,i,) for i in xrange(1,12)]
