@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'we_are_social',
+    'paypal_store',
     'paypal_subscriptions',
 ]
 
