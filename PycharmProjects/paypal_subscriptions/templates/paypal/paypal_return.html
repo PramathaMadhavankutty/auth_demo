@@ -2,9 +2,9 @@
 {% block content %}
     <h1> Thanks for buying my item :)</h1>
 
-    <h2> POST </h2>
-    {{ post }}
+    <h2> You have Successfully paid ${{ post.payment_gross }} to {{ post.receiver_email }}</h2>
 
-    <h2> GET </h2>
-    {{ get }}
+
+    <h2> Your {{ post.item_name }} will be shipped from the next working day of payment. </h2>
+    
 {% endblock %}
