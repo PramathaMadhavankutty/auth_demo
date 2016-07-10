@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'paypal_subscriptions_2',
     'paypal.standard.ipn',
     'paypal_store',
-    
+
 ]
 
 MIDDLEWARE_CLASSES = [
