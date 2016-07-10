@@ -21,6 +21,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$',product_views.get_index, name='index'),
     url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
     url(r'^paypal_return/$', paypal_views.paypal_return),
     url(r'^paypal_cancel/$', paypal_views.paypal_cancel),
