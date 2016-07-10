@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'paypal_subscriptions_2',
+    'paypal.standard.ipn'
 ]
 
 MIDDLEWARE_CLASSES = [
