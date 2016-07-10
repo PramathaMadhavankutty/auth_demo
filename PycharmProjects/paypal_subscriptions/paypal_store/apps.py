@@ -4,4 +4,4 @@ from django.apps import AppConfig
 
 
 class WeAreSocialConfig(AppConfig):
-    name = 'we_are_social'
+    name = 'paypal_store'
