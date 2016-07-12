@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'paypal_store',
     'products',
+    'paypal.standard.ipn',
 
 
 
