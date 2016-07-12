@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'hello',
     'django.contrib.sites',
     'django.contrib.flatpages',
+    'paypal_store',
+
 
 
 ]
