@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello',
+    'accounts',
     'django.contrib.sites',
     'django.contrib.flatpages',
     'paypal_store',
