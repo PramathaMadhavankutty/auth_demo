@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'paypal_store',
     'products',
     'paypal.standard.ipn',
+    'magazines',
 
 
 
