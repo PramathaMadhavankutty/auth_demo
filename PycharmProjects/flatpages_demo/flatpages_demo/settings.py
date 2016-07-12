@@ -133,12 +133,6 @@ STATIC_URL = '/static/'
 SITE_ID = 3
 
 
-# paypal settings
-1
-2
-3
-4
-
 
 
 # PayPal Settings
