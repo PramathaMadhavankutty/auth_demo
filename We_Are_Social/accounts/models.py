@@ -32,3 +32,14 @@ class User(AbstractUser):
     # in later units we'll be adding things like payment details!
 
     objects = AccountUserManager()
+
+    def is_subscribed(self, magazine):
+        try:
+            purchase = self.purchases.get(magazine__pk=magazine.pk)
+        except Exception:
+            return False
+
+        if purchase.subscription_end > timezone.now():
+            return False
+
+        return True
