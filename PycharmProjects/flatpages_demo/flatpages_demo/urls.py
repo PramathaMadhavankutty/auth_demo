@@ -19,13 +19,20 @@ from paypal.standard.ipn import urls as paypal_urls
 from paypal_store import views as paypal_views
 from products import views as product_views
 from magazines import views as magazines_views
+from accounts.views import register,profile,login,logout
 from hello import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.get_index),
+
     #Auth url
     url(r'^pages/',include('django.contrib.flatpages.urls')),
+    url(r'^register/$', register, name='register'),
+    url(r'^profile/$', profile, name='profile'),
+    url(r'^login/$', login, name='login'),
+    url(r'^logout/$', logout, name='logout'),
+
     #Paypal Urls
     url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
     url(r'^paypal-return$', paypal_views.paypal_return),
