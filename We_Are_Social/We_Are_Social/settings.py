@@ -129,3 +129,6 @@ STATIC_URL = '/static/'
 SITE_ID = 4
 
 AUTH_USER_MODEL = 'accounts.User'
+
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',
+                           'accounts.backends.EmailAuth',)
