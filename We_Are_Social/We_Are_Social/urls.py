@@ -15,14 +15,20 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from home import views
 from django.conf.urls import url, include
+from home import views as home_views
+from accounts import views as accounts_views
+
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$',views.get_index),
+    url(r'^$',home_views.get_index, name='index'),
 # Faltpages
     url(r'^pages/',include('django.contrib.flatpages.urls')),
+
+# Email Auth
+    url(r'^register/$',accounts_views.register, name='register'),
+    
 
 ]
