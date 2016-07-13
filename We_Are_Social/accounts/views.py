@@ -3,6 +3,7 @@ from django.shortcuts import render
 from accounts.forms import UserRegistrationForm, UserLoginForm
 from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from django.template.context_processors import csrf
 
 # Create your views here.
@@ -30,7 +31,7 @@ def register(request):
 
     return render(request, 'register.html', args)
 
-
+@login_required(login_url='/login/')
 def profile(request):
     return render(request, 'profile.html')
 
