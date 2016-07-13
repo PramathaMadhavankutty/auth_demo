@@ -127,3 +127,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 SITE_ID = 4
+
+AUTH_USER_MODEL = 'accounts.User'
