@@ -16,9 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from home import views
+from django.conf.urls import url, include
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.get_index),
+# Faltpages
+    url(r'^pages/',include('django.contrib.flatpages.urls')),
 
 ]
