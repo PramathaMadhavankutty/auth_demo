@@ -29,6 +29,6 @@ urlpatterns = [
 
 # Email Auth
     url(r'^register/$',accounts_views.register, name='register'),
-    
+
 
 ]
